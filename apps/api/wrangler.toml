@@ -1,0 +1,49 @@
+name = "dom-api"
+compatibility_date = "2024-08-23"
+main = "dist/worker.js"
+
+[[durable_objects.bindings]]
+name = "LEDGER_DO"
+class_name = "LedgerDO"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["LedgerDO"]
+
+[d1_databases]
+[[d1_databases]]
+binding = "DOM_DB"
+database_name = "dom_db"
+database_id = "00000000-0000-0000-0000-000000000000"
+
+[r2_buckets]
+[[r2_buckets]]
+binding = "R2_ASSETS"
+bucket_name = "dom-assets"
+
+[vars]
+MP_GRANT_MONTHLY = "999"
+ETHER_GRANT = "333"
+ETHER_PRICE_CENTS = "300"
+LEVEL_CAP = "100"
+JWT_TTL_MIN = "5"
+STRIPE_PRICE_ETHER = "price_xxx"
+STRIPE_PRICE_SUB = "price_sub_xxx"
+STRIPE_SECRET_KEY = "sk_test_xxx"
+STRIPE_MP_WEBHOOK_SECRET = "whsec_xxx"
+STRIPE_SUBSCRIPTION_WEBHOOK_SECRET = "whsec_xxx"
+PUBLIC_BASE_URL = "http://localhost:3000"
+ADMIN_SECRET = "dev"
+MAIL_FROM = "noreply@example.com"
+MAIL_FROM_NAME = "Department of Mysteries"
+APP_SSO_PRIVATE_KEY_PEM = "-----BEGIN PRIVATE KEY-----\n...replace-me...\n-----END PRIVATE KEY-----\n"
+R2_ACCOUNT_ID = "xxxxxxxxxxxxxxxxxxxxxx"
+R2_ACCESS_KEY_ID = "AKIAXXXXX"
+R2_SECRET_ACCESS_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+R2_REGION = "auto"
+R2_BUCKET = "dom-assets"
+MAGIC_LINK_TTL_MIN = "10"
+MAGIC_LINK_RATE_LIMIT_PER_HOUR = "10"
+DISPOSABLE_DOMAINS = "mailinator.com,10minutemail.com,guerrillamail.com,tempmail.com,yopmail.com"
+DOWNLOAD_TOKEN_TTL_SEC = "300"
+R2_PRESIGN_TTL_SEC = "60"
